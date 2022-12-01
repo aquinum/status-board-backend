@@ -22,3 +22,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Modules\Netatmo\NetatmoApi:
+        arguments:
+            $clientId: '%env(NETATMO_CLIENT_ID)%'
+            $clientSecret: '%env(NETATMO_CLIENT_SECRET)%'
+            $username: '%env(NETATMO_USERNAME)%'
+            $password: '%env(NETATMO_PASSWORD)%'
